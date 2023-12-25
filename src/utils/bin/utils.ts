@@ -12,7 +12,11 @@ export const help = async (args: string[]): Promise<string> => {
 // };
 
 export const whoami = async (args: string[]): Promise<string> => {
-  return 'guest';
+  setTimeout(function () {
+    window.open('https://en.wikipedia.org/wiki/Solipsism');
+  }, 1000);
+
+  return `As far as I am concerned you might just be a product of my imagination.`;
 };
 
 export const date = async (args: string[]): Promise<string> => {
@@ -20,7 +24,7 @@ export const date = async (args: string[]): Promise<string> => {
 };
 
 export const gui = async (args: string[]): Promise<string> => {
-  window.open('https://m4tt72.com', '_self');
+  window.open('https://anacukarska.vercel.app', '_self');
 
   return 'Opening GUI version...';
 };
@@ -69,6 +73,21 @@ export const music = async (args?: string[]): Promise<string> => {
     'https://www.youtube.com/watch?v=fQDEUU1lyZQ',
     'https://www.youtube.com/watch?v=xpahYJ7UpP4',
     'https://www.youtube.com/watch?v=h8DLofLM7No',
+    'https://www.youtube.com/watch?v=dQw4w9WgXcQ',
+    'https://www.youtube.com/watch?v=oYssb0d4AKQ',
+    'https://www.youtube.com/watch?v=esqRBsVumrw',
+    'https://www.youtube.com/watch?v=xA8MCbepGRE',
+    'https://www.youtube.com/watch?v=bB34_eLCLKo',
+    'https://www.youtube.com/watch?v=E_5vYiLLh8k',
+    'https://www.youtube.com/watch?v=tP97_AQCldk',
+    'https://www.youtube.com/watch?v=l0yRNQj2_tc',
+    'https://www.youtube.com/watch?v=A-Tod1_tZdU',
+    'https://www.youtube.com/watch?v=Jpz_gUyImhw',
+    'https://www.youtube.com/watch?v=7-lWzQd_xeQ',
+    'https://www.youtube.com/watch?v=H5v3kku4y6Q',
+    'https://www.youtube.com/watch?v=ewOPQZZn4SY',
+    'https://www.youtube.com/watch?v=ZWmrfgj0MZI',
+    'https://www.youtube.com/watch?v=fdixQDPA2h0',
   ];
   setTimeout(function () {
     window.open(songs[(Math.random() * songs.length) | 0]);
@@ -98,6 +117,10 @@ export const banner = (args?: string[]): string => {
 
 v${packageJson.version}
 
-Type 'help' to see list of available commands.
+Welcome to my personal webpage interfaced as a terminal. If you are very
+uncomfortable with this type of terminal-style page,
+you can type 'gui' below, and a normal webpage will open.
+
+Type 'help' to see list of available commands and have fun!
 `;
 };
